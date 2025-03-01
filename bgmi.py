@@ -212,7 +212,7 @@ vansh_cooldown = {}
 
 
 # Handler for /vansh command
-@bot.message_handler(commands=['vansh'])
+@bot.message_handler(commands=['bgmi'])
 def handle_vansh(message):
     user_id = str(message.chat.id)
     if user_id in allowed_user_ids:
@@ -234,7 +234,7 @@ def handle_vansh(message):
             if time > 240:
                 response = "❗️𝗘𝗿𝗿𝗼𝗿: 𝘂𝘀𝗲 𝗹𝗲𝘀𝘀𝘁𝗵𝗲𝗻 240 𝘀𝗲𝗰𝗼𝗻𝗱𝘀❗️"
             else:
-                record_command_logs(user_id, '/vansh', target, port, time)
+                record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./bgmi {target} {port} {time} 1800"
